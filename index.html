@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Healthcare Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <h2>🏥 HealthCare</h2>
+    <ul>
+      <li><a href="#">Dashboard</a></li>
+      <li><a href="#">Patients</a></li>
+      <li><a href="#">Appointments</a></li>
+      <li><a href="#">Doctors</a></li>
+      <li><a href="#">Reports</a></li>
+    </ul>
+  </aside>
+
+  <!-- Main Dashboard -->
+  <main class="main">
+    <header>
+      <h1>Dashboard</h1>
+      <input type="text" id="searchBox" placeholder="Search appointments...">
+    </header>
+
+    <!-- Stats Cards -->
+    <section class="cards">
+      <div class="card">
+        <h3>Patients</h3>
+        <p id="patientCount">120</p>
+      </div>
+      <div class="card">
+        <h3>Appointments</h3>
+        <p id="appointmentCount">35</p>
+      </div>
+      <div class="card">
+        <h3>Doctors</h3>
+        <p id="doctorCount">12</p>
+      </div>
+      <div class="card">
+        <h3>Reports</h3>
+        <p id="reportCount">8</p>
+      </div>
+    </section>
+
+    <!-- Add Appointment Form -->
+    <section class="form-section">
+      <h2>Add New Appointment</h2>
+      <input type="text" id="patientName" placeholder="Patient Name">
+      <input type="text" id="doctorName" placeholder="Doctor Name">
+      <input type="date" id="appointmentDate">
+      <button onclick="addAppointment()">Add Appointment</button>
+    </section>
+
+    <!-- Table -->
+    <section class="table">
+      <h2>Upcoming Appointments</h2>
+      <table id="appointmentTable">
+        <tr>
+          <th>Patient</th>
+          <th>Doctor</th>
+          <th>Date</th>
+          <th>Status</th>
+          <th>Action</th>
+        </tr>
+        <tr>
+          <td>John Doe</td>
+          <td>Dr. Smith</td>
+          <td>2025-09-02</td>
+          <td>Confirmed</td>
+          <td><button onclick="deleteRow(this)">❌</button></td>
+        </tr>
+        <tr>
+          <td>Jane Roe</td>
+          <td>Dr. Brown</td>
+          <td>2025-09-03</td>
+          <td>Pending</td>
+          <td><button onclick="deleteRow(this)">❌</button></td>
+        </tr>
+      </table>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
