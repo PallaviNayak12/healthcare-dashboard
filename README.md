@@ -11,7 +11,7 @@ It provides an interface for managing **patients, doctors, and appointments**
 ✅ Sidebar navigation   
 ✅ Add / Delete appointments dynamically  
 ✅ Search appointments in real-time  
-✅ Responsive layout with modern UI  
+✅ Responsive layout with modern UI 
 
 ---
 
